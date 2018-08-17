@@ -31,7 +31,7 @@
 				<groupId>org.codehaus.sonar</groupId>
 				<artifactId>sonar-maven-plugin</artifactId>
 				<version>5.1</version>
-			</plugin>	
+			</plugin>
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -114,6 +114,11 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+	        <groupId>org.assertj</groupId>
+	        <artifactId>assertj-core</artifactId>
+	        <version>3.9.1</version>
+	        <scope>test</scope>
+     	</dependency>
 	</dependencies>
 </project>
