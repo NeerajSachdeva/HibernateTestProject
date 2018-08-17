@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- ~ Hibernate, Relational Persistence for Idiomatic Java ~ ~ License:
+	GNU Lesser General Public License (LGPL), version 2.1 or later. ~ See the
+	lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>. -->
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<!-- Database connection settings -->
+
+		<property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+
+		<!-- Assume test is the database name -->
+		<property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/FirstPGDB</property>
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">create</property>
+
+		<!-- Name of the annotated entity class -->
+		<!-- HibernateTest1 -->
+		<mapping class="my.test.project.dto.test1.UserDetails" />
+		<mapping class="my.test.project.dto.test1.TestDB" />
+
+		<!-- HibernateTest2 -->
+		<mapping class="my.test.project.dto.test2.UserDetailsTwo" />
+
+		<!-- HibernateTest3 -->
+		<mapping class="my.test.project.dto.test3.UserDetailsThree" />
+		<mapping class="my.test.project.dto.test3.Vehicle3" />
+		<mapping class="my.test.project.dto.test3.Address3" />
+		<mapping class="my.test.project.dto.test3.PhoneNumbers3" />
+		<mapping class="my.test.project.dto.test3.Parents" />
+		<mapping class="my.test.project.dto.test3.BodyParts" />
+
+		<!-- HibernateTest4 -->
+		<mapping class="my.test.project.dto.test4.Vehicle4" />
+		<mapping class="my.test.project.dto.test4.TwoWheeler" />
+		<mapping class="my.test.project.dto.test4.FourWheeler" />
+
+		<!-- HibernateTest5 -->
+		<mapping class="my.test.project.dto.test5.Vehicle5" />
+		<mapping class="my.test.project.dto.test5.TwoWheeler5" />
+		<mapping class="my.test.project.dto.test5.FourWheeler5" />
+
+		<!-- HibernateTest6 -->
+		<mapping class="my.test.project.dto.test6.Person" />
+
+		<!-- HibernateNPlusOneProblem -->
+		<mapping class="my.test.project.dto.test7.One" />
+		<mapping class="my.test.project.dto.test7.Two" />
+	</session-factory>
+
+</hibernate-configuration>
